@@ -61,6 +61,7 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         GithubRepo.fetchRepos(searchSettings, successCallback: { (newRepos) -> Void in
 
             // Print the returned repositories to the output window
+            self.repos = []
             for repo in newRepos {
                 print(repo)
                 self.repos.append(repo)
